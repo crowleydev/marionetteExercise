@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Marionette exercise</title>
+
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/application.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+
+			<div class="container">
+				<span class="brand">Contact manager</span>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="app-container">
+		<div id="main-region" class="container">
+			<p>Here is static content in the web</p>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" id="static-template">
+<p> This is the text that was rendered by MN app </p>
+</script>
+
+	<script type="text/javascript" id="different-static-template">
+<p> Text from a diff template... </p>
+</script>
+
+
+	<script type="text/x-handlebars-template" id="contact-list-item">
+
+{{firstName}} {{lastName}}
+
+</script>
+
+	<script type="text/x-handlebars-template" id="another-template">
+
+<p><span>Firstname: {{firstName}} </span> </br>
+<span>Lastname: {{lastName}} </span></p>
+
+
+</script>
+
+
+
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/json2/20121008/json2.js">
+		
+	</script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/backbone.marionette/2.3.2/backbone.marionette.js"></script>
+
+
+
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/entities/contact.js"></script>
+	<script src="assets/js/apps/contacts/list/listView.js"></script>
+	<script src="assets/js/apps/contacts/list/listController.js"></script>
+	
+	<script type="text/javascript"> 
+
+	
+
+	ContactManager.start();
+
+</script>
+	
+
+</body>
+</html>
